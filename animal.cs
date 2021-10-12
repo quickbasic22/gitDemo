@@ -40,6 +40,12 @@ namespace CSharp_Shell
                return false;
             }
         }
+	
+	public override string ToString()
+	{
+	    return "Cat with Mammal";
+	}
+	
     }
 
     public static class Program
@@ -48,6 +54,8 @@ namespace CSharp_Shell
         {
            var cat = new Cat();
            var alive = cat.Alive;
+		Console.WriteLine(cat.ToString());
+		
            Console.WriteLine("Alive: {0}", alive);
            if (alive)
            {
